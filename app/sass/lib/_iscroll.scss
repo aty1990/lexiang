@@ -1,0 +1,75 @@
+@import "./variables";
+
+.wrapper-list {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background: $bg-default;
+  overflow: hidden;
+}
+
+.scroller-list {
+  position: absolute;
+  z-index: 1;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+.pull-comm {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: $bg-default;
+  height: 60px;
+  font-size: 12px;
+  color: $font-gray;
+  text-align: center;
+  z-index: 1;
+
+  .comm-refresh {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+  }
+}
+
+.pull-down {
+  @extend .pull-comm;
+  top: -60px;
+}
+
+.pull-up {
+  @extend .pull-comm;
+  bottom: -60px;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+  }
+}

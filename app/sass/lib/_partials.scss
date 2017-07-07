@@ -1,0 +1,78 @@
+@import "variables";
+
+// base utils
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+@each $i in 0, 4, 8, 10, 12, 16, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 96 {
+  $num: $i * 1px;
+  .mg-all-#{$i} {
+    margin: $num !important;
+  }
+  .mgt-#{$i} {
+    margin-top: $num !important;
+  }
+  .mgr-#{$i} {
+    margin-right: $num !important;
+  }
+  .mgb-#{$i} {
+    margin-bottom: $num !important;
+  }
+  .mgl-#{$i} {
+    margin-left: $num !important;
+  }
+  .pd-all-#{$i} {
+    padding: $num !important;
+  }
+  .pdt-#{$i} {
+    padding-top: $num !important;
+  }
+  .pdr-#{$i} {
+    padding-right: $num !important;
+  }
+  .pdb-#{$i} {
+    padding-bottom: $num !important;
+  }
+  .pdl-#{$i} {
+    padding-left: $num !important;
+  }
+  .radius-#{$i} {
+    border-radius: $num !important;
+  }
+}
+
+// 覆盖tabbar的样式
+.weui-tabbar__item {
+  .weui-tabbar__label {
+    color: $color-default;
+  }
+
+  &.weui-bar__item_on {
+    .weui-tabbar__label {
+      color: $color-selected;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<div class="page bg-gray order-container">
+  <form id="receipt-confirm-form">
+    <div class="order-detail">
+      <div class="mgb-12 weui-form-preview">
+        <div class="title weui-flex"><i class="app-icon order-lx-mall mgr-4"></i><span>乐享商城</span></div>
+        <div class="main">
+          <div>订单号：<span name="orderCode"></span></div>
+          <div class="font-red" name="orderStatusStr"></div>
+        </div>
+        <div class="detail">
+          <div class="weui-media-box weui-media-box_appmsg">
+            <div class="weui-media-box__hd">
+              <img class="weui-media-box__thumb" src="">
+            </div>
+            <div class="weui-media-box__bd">
+              <div class="head"><span name="goodsName"></span></div>
+              <div class="content mgt-8">
+                <div>
+                  <span class="font-red">¥ <span name="salePriceYuan"></span></span>
+                  × <span name="quantity"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weui-form-preview__bd pd-all-0">
+          <div class="weui-form-preview__item">
+            <label class="weui-form-preview__label">拼团信息:</label>
+            <div class="weui-form-preview__value vertical"><span class="font-red">拼团成功</span>
+            </div>
+          </div>
+          <div class="weui-form-preview__item">
+            <label class="weui-form-preview__label">下单时间:</label>
+            <div class="weui-form-preview__value vertical" name="createTime"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="btn-bottom" id="receipt-confirm-btn">确定</a>
+  </form>
+</div>

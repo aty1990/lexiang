@@ -1,0 +1,42 @@
+@import "animation";
+
+.page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 501;
+    &.has-tab {
+        bottom: 53px;
+    }
+
+    &.slideIn {
+        visibility: visible;
+        -webkit-animation: to-left .3s forwards .01s;
+        -moz-animation: to-left .3s forwards .01s;
+        -ms-animation: to-left .3s forwards .01s;
+        -o-animation: to-left .3s forwards .01s;
+        animation: to-left .3s forwards .01s;
+
+    }
+    &.slideOut {
+        -webkit-animation: to-right .3s forwards;
+        -moz-animation: to-right .3s forwards;
+        -ms-animation: to-right .3s forwards;
+        -o-animation: to-right .3s forwards;
+        animation: to-right .3s forwards;
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "button":[
+    {
+      "type":"view",
+      "name":"乐享商城",
+      "url":"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxf12886936b12e328&redirect_uri=http://yuan.natapp4.cc/wechatPlatform/authCode&response_type=code&scope=snsapi_base&state=home#wechat_redirect"
+    }
+  ]
+}

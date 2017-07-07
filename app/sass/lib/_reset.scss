@@ -1,0 +1,19 @@
+@import "variables";
+
+body {
+  color: $color-default;
+  font-size: 14px;
+}
+
+body * {
+  box-sizing: border-box;
+  color: inherit;
+}
+
+
+// reset for weui
+.weui-cell {
+  &:before {
+    left: 0;
+  }
+}

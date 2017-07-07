@@ -1,0 +1,112 @@
+@import "variables";
+
+// list
+.list {
+  > .item {
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+
+    height: 48px;
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 1px solid $color-tabbar;
+  }
+
+  .item-hd,
+  .item-bd,
+  .item-ft {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    transition: .1s all linear;
+  }
+
+  .item-hd {
+    -webkit-flex-grow:0;
+    -moz-flex-grow:0;
+    -ms-flex-grow:0;
+    -o-flex-grow:0;
+    flex-grow: 0;
+    -webkit-flex-basis:40px;
+    -moz-flex-basis:40px;
+    -ms-flex-basis:40px;
+    -o-flex-basis:40px;
+    flex-basis: 40px;
+    margin-left: 18px;
+    margin-right: 5px;
+    text-align: center;
+  }
+
+  .item-bd {
+    -webkit-flex-grow:1;
+    -moz-flex-grow:1;
+    -ms-flex-grow:1;
+    -o-flex-grow:1;
+    flex-grow: 1;
+  }
+
+  .item-ft {
+    -webkit-flex-grow:0;
+    -moz-flex-grow:0;
+    -ms-flex-grow:0;
+    -o-flex-grow:0;
+    flex-grow: 0;
+    padding-right: 15px;
+  }
+
+  .item-btn {
+    position: absolute;
+    right: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+
+    &.delete {
+      background-color: $color-selected;
+    }
+  }
+
+  // 增加weui的radio图标的尺寸
+  &.weui-cells_radio .weui-check:checked+.weui-icon-checked:before {
+    font-size: 24px;
+  }
+}

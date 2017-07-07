@@ -1,0 +1,29 @@
+<div class="page">
+    <div class="goods has-footer">
+        <div class="list list-address weui-cells_radio choiseAddress_div"></div>
+        <form class="purchase_form" novalidate="novalidate"></form>
+    </div>
+
+    <div class="goods footer">
+        <button class="footer-btn-submit" id="goods_purchase_submit">微信支付</button>
+    </div>
+
+    <!-- toast -->
+    <div id="purchaseToast" style="display:none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">支付成功</p>
+        </div>
+    </div>
+
+    <!-- loading toast -->
+    <div id="purchaseLoadingToast" style="display:none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-loading weui-icon_toast"></i>
+            <p class="weui-toast__content">订单生成中</p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+@import "./variables";
+
+.spinner {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  a {
+    $bg-color: #f7f8f8;
+    i {
+      background-color: $bg-color;
+      height: 28px;
+      width: 28px;
+      border: 1px solid $border-color;
+    }
+    &:active {
+      i {
+        background-color: darken($bg-color, 5%);
+      }
+    }
+    &.minus {
+      i {
+        @extend .spinner-minus;
+      }
+      &.disabled, &.disabled:active {
+        i {
+          @extend .spinner-minus-disabled;
+          background-color: $bg-color;
+        }
+
+      }
+    }
+    &.plus {
+      i {
+        @extend .spinner-plus;
+      }
+      &.disabled, &.disabled:active {
+        i {
+          @extend .spinner-plus-disabled;
+          background-color: $bg-color;
+        }
+      }
+    }
+  }
+
+  input[type="text"], input[type="number"] {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    vertical-align: middle;
+    width: 50px;
+    height: 28px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    text-align: center;
+    color: $color-selected;
+    margin: 0 -1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  }
+}

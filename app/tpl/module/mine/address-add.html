@@ -1,0 +1,36 @@
+<div class="page">
+
+  <form id="addAddressForm" novalidate="novalidate">
+    <div class="weui-cells weui-cells_form mgt-0">
+      <div class="weui-cell pdt-20 pdb-20">
+        <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="text" name="consignee" placeholder="请输入收货人姓名"
+                 required emptyTips="请输入收货人姓名">
+        </div>
+        <div class="weui-cell__ft"><i class="weui-icon-warn"></i></div>
+      </div>
+
+      <div class="weui-cell pdt-20 pdb-20">
+        <div class="weui-cell__hd"><label class="weui-label">电话</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" type="number" name="consigneeMobile" placeholder="请输入收货人手机号码"
+                 required pattern="REG_PHONE_NUMBER" emptyTips="请输入收货人手机号码" notMatchTips="请输入正确的手机号码">
+        </div>
+        <div class="weui-cell__ft"><i class="weui-icon-warn"></i></div>
+      </div>
+
+      <div class="weui-cell pdt-20 pdb-20">
+        <div class="weui-cell__bd">
+           <textarea id="textarea" class="weui_textarea" name="consigneeAddr" placeholder="请输入详细地址" rows="4" required emptyTips="请输入收货人的详细地址" maxlength="50"></textarea>
+        </div>
+        <div class="weui-cell__ft"><i class="weui-icon-warn"></i></div>
+      </div>
+    </div>
+
+    <div class="pdt-24 pdl-12 pdr-12">
+      <button class="weui-btn weui-btn_primary" type="submit">保存</button>
+    </div>
+  </form>
+
+</div>

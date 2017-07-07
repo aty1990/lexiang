@@ -1,0 +1,304 @@
+@mixin sprite-width($sprite) {
+width: nth($sprite, 3);
+}
+
+@mixin sprite-height($sprite) {
+height: nth($sprite, 4);
+}
+
+@function sprite-width($sprite) {
+@return nth($sprite, 3);
+}
+
+@function sprite-height($sprite) {
+@return nth($sprite, 4);
+}
+
+@mixin sprite-position($sprite) {
+$sprite-offset-x: nth($sprite, 1);
+$sprite-offset-y: nth($sprite, 2);
+background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite($sprite, $display: block) {
+@include sprite-position($sprite);
+background-repeat: no-repeat;
+overflow: hidden;
+display: $display;
+@include sprite-width($sprite);
+@include sprite-height($sprite);
+}
+    $spinner-minus: -0px -0px 18px 6px;
+    .spinner-minus{
+      &:before {
+        @include sprite($spinner-minus,inline-block);
+      }
+    }
+    $spinner-minus-disabled: -0px -6px 18px 6px;
+    .spinner-minus-disabled{
+      &:before {
+        @include sprite($spinner-minus-disabled,inline-block);
+      }
+    }
+    $scroller-page2: -0px -12px 12px 12px;
+    .scroller-page2{
+      &:before {
+        @include sprite($scroller-page2,inline-block);
+      }
+    }
+    $scroller-page: -0px -24px 12px 12px;
+    .scroller-page{
+      &:before {
+        @include sprite($scroller-page,inline-block);
+      }
+    }
+    $scroller-page-active2: -0px -36px 12px 12px;
+    .scroller-page-active2{
+      &:before {
+        @include sprite($scroller-page-active2,inline-block);
+      }
+    }
+    $scroller-page-active: -0px -48px 12px 12px;
+    .scroller-page-active{
+      &:before {
+        @include sprite($scroller-page-active,inline-block);
+      }
+    }
+    $spinner-plus: -0px -60px 18px 18px;
+    .spinner-plus{
+      &:before {
+        @include sprite($spinner-plus,inline-block);
+      }
+    }
+    $spinner-plus-disabled: -0px -78px 18px 18px;
+    .spinner-plus-disabled{
+      &:before {
+        @include sprite($spinner-plus-disabled,inline-block);
+      }
+    }
+    $goods-phone: -0px -96px 20px 19px;
+    .goods-phone{
+      &:before {
+        @include sprite($goods-phone,inline-block);
+      }
+    }
+    $clickable: -0px -115px 13px 20px;
+    .clickable{
+      &:before {
+        @include sprite($clickable,inline-block);
+      }
+    }
+    $order-group-shop: -0px -135px 20px 20px;
+    .order-group-shop{
+      &:before {
+        @include sprite($order-group-shop,inline-block);
+      }
+    }
+    $comm-warning: -0px -155px 25px 25px;
+    .comm-warning{
+      &:before {
+        @include sprite($comm-warning,inline-block);
+      }
+    }
+    $order-selected: -0px -180px 24px 26px;
+    .order-selected{
+      &:before {
+        @include sprite($order-selected,inline-block);
+      }
+    }
+    $order: -0px -206px 24px 26px;
+    .order{
+      &:before {
+        @include sprite($order,inline-block);
+      }
+    }
+    $mine: -0px -232px 24px 26px;
+    .mine{
+      &:before {
+        @include sprite($mine,inline-block);
+      }
+    }
+    $mine-selected: -0px -258px 24px 26px;
+    .mine-selected{
+      &:before {
+        @include sprite($mine-selected,inline-block);
+      }
+    }
+    $home: -0px -284px 30px 27px;
+    .home{
+      &:before {
+        @include sprite($home,inline-block);
+      }
+    }
+    $home-selected: -0px -310px 30px 27px;
+    .home-selected{
+      &:before {
+        @include sprite($home-selected,inline-block);
+      }
+    }
+    $order-to-evaluate-selected: -0px -337px 27px 28px;
+    .order-to-evaluate-selected{
+      &:before {
+        @include sprite($order-to-evaluate-selected,inline-block);
+      }
+    }
+    $order-to-evaluate: -0px -364px 27px 28px;
+    .order-to-evaluate{
+      &:before {
+        @include sprite($order-to-evaluate,inline-block);
+      }
+    }
+    $order-to-deliver: -0px -392px 27px 28px;
+    .order-to-deliver{
+      &:before {
+        @include sprite($order-to-deliver,inline-block);
+      }
+    }
+    $order-gp-buying-selected: -0px -420px 28px 28px;
+    .order-gp-buying-selected{
+      &:before {
+        @include sprite($order-gp-buying-selected,inline-block);
+      }
+    }
+    $order-gp-buying: -0px -448px 28px 28px;
+    .order-gp-buying{
+      &:before {
+        @include sprite($order-gp-buying,inline-block);
+      }
+    }
+    $order-to-receipt: -0px -476px 31px 28px;
+    .order-to-receipt{
+      &:before {
+        @include sprite($order-to-receipt,inline-block);
+      }
+    }
+    $order-lx-mall: -0px -504px 28px 28px;
+    .order-lx-mall{
+      &:before {
+        @include sprite($order-lx-mall,inline-block);
+      }
+    }
+    $order-to-receipt-selected: -0px -532px 31px 28px;
+    .order-to-receipt-selected{
+      &:before {
+        @include sprite($order-to-receipt-selected,inline-block);
+      }
+    }
+    $order-to-pay: -0px -560px 28px 28px;
+    .order-to-pay{
+      &:before {
+        @include sprite($order-to-pay,inline-block);
+      }
+    }
+    $plus: -0px -588px 28px 28px;
+    .plus{
+      &:before {
+        @include sprite($plus,inline-block);
+      }
+    }
+    $order-to-deliver-selected: -0px -616px 27px 28px;
+    .order-to-deliver-selected{
+      &:before {
+        @include sprite($order-to-deliver-selected,inline-block);
+      }
+    }
+    $order-to-pay-selected: -0px -644px 28px 28px;
+    .order-to-pay-selected{
+      &:before {
+        @include sprite($order-to-pay-selected,inline-block);
+      }
+    }
+    $mine-service-phone: -0px -672px 31px 30px;
+    .mine-service-phone{
+      &:before {
+        @include sprite($mine-service-phone,inline-block);
+      }
+    }
+    $mine-my-address: -0px -702px 25px 32px;
+    .mine-my-address{
+      &:before {
+        @include sprite($mine-my-address,inline-block);
+      }
+    }
+    $mine-my-order: -0px -734px 27px 32px;
+    .mine-my-order{
+      &:before {
+        @include sprite($mine-my-order,inline-block);
+      }
+    }
+    $mine-my-group: -0px -766px 33px 32px;
+    .mine-my-group{
+      &:before {
+        @include sprite($mine-my-group,inline-block);
+      }
+    }
+    $mine-my-member: -0px -798px 35px 35px;
+    .mine-my-member{
+      &:before {
+        @include sprite($mine-my-member,inline-block);
+      }
+    }
+    $comm-pull-down: -0px -833px 37px 37px;
+    .comm-pull-down{
+      &:before {
+        @include sprite($comm-pull-down,inline-block);
+      }
+    }
+    $comm-refresh: -0px -869px 37px 37px;
+    .comm-refresh{
+      &:before {
+        @include sprite($comm-refresh,inline-block);
+      }
+    }
+    $goods-qrcode: -0px -906px 40px 40px;
+    .goods-qrcode{
+      &:before {
+        @include sprite($goods-qrcode,inline-block);
+      }
+    }
+    $mine-anonymous-header: -0px -946px 40px 41px;
+    .mine-anonymous-header{
+      &:before {
+        @include sprite($mine-anonymous-header,inline-block);
+      }
+    }
+    $goods-kt: -0px -986px 83px 62px;
+    .goods-kt{
+      &:before {
+        @include sprite($goods-kt,inline-block);
+      }
+    }
+    $order-goods-exp: -0px -1048px 64px 64px;
+    .order-goods-exp{
+      &:before {
+        @include sprite($order-goods-exp,inline-block);
+      }
+    }
+    $mine-my-group-card: -0px -1112px 104px 104px;
+    .mine-my-group-card{
+      &:before {
+        @include sprite($mine-my-group-card,inline-block);
+      }
+    }
+
+  .app-icon{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+  }
+
+    .app-icon:before {
+    background-image: url('../img/sprite.png');
+    content:'';
+    margin:auto;
+    }
+
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .app-icon:before {
+    background-image: url('../img/sprite@2x.png');
+    content:'';
+    margin:auto;
+      background-size: 104px 1216px;
+    }
+      }
+

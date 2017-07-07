@@ -1,0 +1,326 @@
+@import "../lib/variables";
+
+.page-home {
+    .discount{
+        border:1px solid red;
+        font-size: 12px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        -webkit-transform:scale(.7); /* Safari 和 Chrome */
+        -moz-transform:scale(.7);    /* Firefox */
+        -ms-transform:scale(.7);     /* IE 9 */
+        -o-transform:scale(.7);  /* Opera */
+        transform:scale(.7);
+    }
+}
+
+.myClearfix {
+  *zoom: 1;
+  &:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+.bg-page {
+  background-color: $bg-default;
+}
+
+.bg-white {
+  background-color: $bg-white;
+}
+
+a.item:active {
+  background-color: #CCC;
+}
+
+.scroller-box {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  .scroller {
+    height: 100%;
+    z-index: 1;
+
+    .slide {
+      height: 100%;
+      float: left;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .indicator {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    line-height: 1em;
+
+    .dotty {
+      position: absolute;
+      width: auto;
+      height: 12px;
+    }
+  }
+}
+
+.home-banner {
+  img {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.home-classified {
+  padding-bottom: 10px;
+  .list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .item {
+    width: 20%;
+    height: auto;
+    border: none;
+    padding: 8px 0;
+    display: block;
+
+    .img {
+      width: 44px;
+      height: 44px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      img {
+        width: 44px;
+      }
+    }
+    .txt {
+      text-align: center;
+      font-size: 13px;
+      color: $font-black;
+      margin-top: 8px;
+    }
+  }
+}
+
+.home-adv {
+  display: block;
+  height: 180px;
+
+  .img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.home-pane {
+  @extend .myClearfix;
+  .pane-head {
+    padding: 12px;
+    .pane-title {
+      font-size: 15px;
+      color: $font-black;
+      &:before {
+        content: '';
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: inline-flex;
+        width: 4px;
+        height: 16px;
+        background-color: $color-selected;
+        vertical-align: text-bottom;
+        margin-right: 4px;
+      }
+    }
+    .more {
+      font-size: 12px;
+      float: right;
+      color: $font-gray;
+    }
+  }
+  .pane-content {
+
+  }
+  .item {
+    float: left;
+    margin-left: 12px;
+    min-width: 100px;
+    padding-bottom: 8px;
+    .img {
+      @extend .myClearfix;
+      width: 100%;
+      height: 130px;
+      border-radius: 0;
+      margin: 0 auto;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+    }
+    font-size: 12px;
+    color: $color-default;
+    .detail {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 14px;
+      align-items: baseline;
+    }
+    .title {
+        margin-top: 8px;
+        line-height: 18px;
+        overflow:hidden; 
+        text-overflow:clip;
+        display:-webkit-box; 
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2; 
+    }
+    .money {
+      font-size: 14px;
+      color: $color-selected;
+      white-space: nowrap;
+    }
+  }
+}
+
+.home-more {
+  .item-active:active {
+    box-shadow: 0 0 10px #ccc;
+  }
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -2px;
+  .item {
+    width: 50%;
+    padding: 2px;
+    .img {
+      @extend .myClearfix;
+      width: 100%;
+      border-radius: 0;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        float: left;
+      }
+    }
+    font-size: 13px;
+    color: $color-default;
+    .detail {
+      padding: 0 12px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      line-height: 14px;
+      align-items: baseline;
+    }
+    .discount{
+        border:2px solid red;
+        font-size: 12px;
+        margin-right: 4px;
+        padding: 1px 4px;
+        border-radius: 2px;
+        
+    }
+    .title {
+      padding: 0 12px;
+      margin-top: 8px;
+      line-height: 18px;
+    }
+    .money {
+      font-size: 14px;
+      color: $color-selected;
+      white-space: nowrap;
+    }
+  }
+}
+
+.rmb{
+  &:before{
+    content: '¥';
+    font-size: 12px;
+    margin-right: 1px;
+  }
+}
+.follow-ui{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 999;
+    .msg-tip{
+            width: 100%;
+           height: 40px;
+           line-height: 40px;
+           position: relative;
+    }  
+    .msg-tip:before{
+       content: '';
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       top:0;
+       left:0;
+       background: #000;
+       opacity: 0.7;
+       z-index: 1000;
+    } 
+    .msg-tip:after{
+       content: '关注湖南乐享公众号';
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       color:#fff;
+       top:0;
+       left:0;
+       z-index: 1001;
+   } 
+}
+.no-data-ele{
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:50px;
+    z-index: 999;
+    background:url("../img/nodata.png") center no-repeat;
+    background-size:150px;
+    
+}
+.address-tips{
+    padding:8px 0 8px 15px;
+    font-size: 14px;
+    border:1px solid #eee;
+    color:red;
+}
+

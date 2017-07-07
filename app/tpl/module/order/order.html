@@ -1,0 +1,51 @@
+<div class="page has-tab bg-gray order-container">
+
+  <a class="weui-cell weui-cell_access pdl-12 pdr-12" data-id="button" href="#/order/order-history">
+    <div class="weui-cell__bd">
+      <p>查看历史订单</p>
+    </div>
+    <div class="weui-cell__ft"></div>
+  </a>
+
+  <div class="switch-tabs">
+    <div class="switch-tab" data-tab-name="order-to-pay">
+      <i class="app-icon order-to-pay"></i>
+      <div>待付款</div>
+    </div>
+    <div class="switch-tab" data-tab-name="order-gp-buying">
+      <i class="app-icon order-gp-buying"></i>
+      <div>拼团中</div>
+    </div>
+    <div class="switch-tab" data-tab-name="order-to-deliver">
+      <i class="app-icon order-to-deliver"></i>
+      <div>待发货</div>
+    </div>
+    <div class="switch-tab" data-tab-name="order-to-receipt">
+      <i class="app-icon order-to-receipt"></i>
+      <div>待收货</div>
+    </div>
+    <div class="switch-tab" data-tab-name="order-to-evaluate">
+      <i class="app-icon order-to-evaluate"></i>
+      <div>待评价</div>
+    </div>
+  </div>
+
+  <div class="wrapper-list order-main-list">
+    <!-- 订单超时空提示 -->
+    <div class="warning-title pdl-12 weui-flex">
+      <i class="app-icon comm-warning mgr-4"></i>
+      <span id="orderRemind"></span>
+    </div>
+
+    <!-- 订单列表容器 -->
+    <div class="order-list">
+      <div class="order-list-scroller">
+        <div class="orders order-to-pay"><div class="orders-scroller"></div></div>
+        <div class="orders order-gp-buying"><div class="orders-scroller"></div></div>
+        <div class="orders order-to-deliver"><div class="orders-scroller"></div></div>
+        <div class="orders order-to-receipt"><div class="orders-scroller"></div></div>
+        <div class="orders order-to-evaluate"><div class="orders-scroller"></div></div>
+      </div>
+    </div>
+  </div>
+</div>

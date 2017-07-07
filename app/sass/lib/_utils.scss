@@ -1,0 +1,23 @@
+@import "./variables";
+
+.float-right{
+  float: right;
+}
+.bg-gray{
+  background-color: $bg-default;
+}
+.font-gray{
+  color: $font-gray;
+}
+.font-red{
+  color: $color-selected;
+}
+.font-orange {
+  color: $orange;
+}
+.font-black{
+  color: $font-black;
+}
+.font-12{
+  font-size: 12px!important;
+}
